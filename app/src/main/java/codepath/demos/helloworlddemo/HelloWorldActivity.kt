@@ -1,22 +1,27 @@
-package codepath.demos.helloworlddemo;
+package codepath.demos.helloworlddemo
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
+import android.app.Activity
+import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.widget.Button
+import android.widget.Toast
+import codepath.demos.helloworlddemo.R
 
-public class HelloWorldActivity extends Activity {
+class HelloWorldActivity : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_hello_world)
+        val button = findViewById<Button>(R.id.helloButton)
+        button.setOnClickListener {
+            Log.v("Hello world","Button clicked!")
+            Toast.makeText(this,"Hello to you too,Comrad!",Toast.LENGTH_SHORT).show()
+        }
+    }
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_hello_world);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_hello_world, menu);
-		return true;
-	}
-
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.activity_hello_world, menu)
+        return true
+    }
 }

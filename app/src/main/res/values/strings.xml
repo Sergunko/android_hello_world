@@ -2,7 +2,9 @@
 <resources>
 
     <string name="app_name">HelloWorldDemo</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello World! My name is Sergey,Originally from Russia and thus my nickname became Russian Bear.</string>
     <string name="menu_settings">Settings</string>
+    <string name="avatar">Bear</string>
+    <string name="button">Click me!</string>
 
 </resources>

@@ -1,0 +1,2 @@
+codepath/demos/helloworlddemo/BuildConfig.java
+ codepath.demos.helloworlddemo.BuildConfig
